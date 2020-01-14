@@ -8,8 +8,7 @@ class Interval {
 
 class lab2 { 
 
- public static void main(String args[]) 
- {  
+ public static void main(String args[]) {
      int price[] = {80, 100, 110, 90, 65,70, 75, 90, 80, 70, 100, 80, 65, 60, 55, 50}; 
      
      int n = price.length;
@@ -21,7 +20,7 @@ class lab2 {
      ArrayList<Interval> sol = new ArrayList<Interval>(); 
 
      int i = 0; 
-     while (i < n - 1) { 
+     while (i < n - 1) {  	
 
          while ((i < n - 1) && (price[i + 1] <= price[i])) 
              i++; 
@@ -32,7 +31,7 @@ class lab2 {
          Interval e = new Interval(); 
          e.buy = i++; 
 
-         while ((i < n) && (price[i] >= price[i - 1])) 
+         while ((i < n) && (price[i] >= price[i - 1]))
              i++; 
 
          e.sell = i - 1; 
@@ -48,5 +47,5 @@ class lab2 {
              System.out.println("Buy on day: " + sol.get(j).buy + " Sell on day : " 
          + sol.get(j).sell + " Profit : " + (price[sol.get(j).sell] - price[sol.get(j).buy]) );
 
- } 
-} 
+ }
+}
